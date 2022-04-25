@@ -2,8 +2,8 @@
 {
     public struct Program
     {
-        public string Name { get; set; }
-        public ulong Order { get; set; }
+        public string name { get; set; }
+        public ulong order { get; set; }
         public ulong program_id { get; set; }
     }
 }
