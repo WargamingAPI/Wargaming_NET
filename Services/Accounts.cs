@@ -49,7 +49,7 @@ namespace Wargaming_Net.Services
             );
         }
 
-        public async Task<AccountInfo> GetAccountInfo(
+        public async Task<Respond<Meta, Dictionary<ulong, AccountInfo?>>> GetAccountInfo(
             Regions region,
             IEnumerable<long> accountId,
             Language language = Language.en,
@@ -57,7 +57,7 @@ namespace Wargaming_Net.Services
             IEnumerable<string>? fields = null
         )
         {
-            return await _client.GetRequest<AccountInfo>(
+            return await _client.GetRequest<Respond<Meta, Dictionary<ulong, AccountInfo?>>>(
                 new RequestArguments
                 {
                     Region = region,

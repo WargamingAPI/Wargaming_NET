@@ -6,6 +6,7 @@ using Wargaming_Net.Types.Servers;
 using WargamingApi.Types;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;
 using RequestParameters = Wargaming_Net.Types.RequestParameters;
+using TypeServers = System.Collections.Generic.Dictionary<string, System.Collections.Generic.IEnumerable<Wargaming_Net.Types.Servers.Server>>;
 
 namespace Wargaming_Net.Services
 {
@@ -18,18 +19,14 @@ namespace Wargaming_Net.Services
             _client = client;
         }
 
-        public async Task<
-            Respond<ServersMeta, Dictionary<string, IEnumerable<Server>>?>
-        > GetServersOnline(
+        public async Task<Respond<ServersMeta, TypeServers?>> GetServersOnline(
             Regions region,
             Language language = Language.en,
             IEnumerable<string>? fields = null,
             IEnumerable<string>? game = null
         )
         {
-            return await _client.GetRequest<
-                Respond<ServersMeta, Dictionary<string, IEnumerable<Server>>?>
-            >(
+            return await _client.GetRequest<Respond<ServersMeta, TypeServers?>>(
                 new RequestArguments
                 {
                     Region = region,

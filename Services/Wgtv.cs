@@ -75,8 +75,7 @@ namespace Wargaming_Net.Services
         )
         {
             return await _client.GetRequest<
-                Respond<WgtvMeta, Dictionary<string, IEnumerable<ulong>>>
-            >(
+                Respond<WgtvMeta, Dictionary<string, IEnumerable<ulong>>>>(
                 new RequestArguments
                 {
                     Region = region,

@@ -31,7 +31,7 @@ namespace Wargaming_Net
             if (services == Service.None)
                 return Services;
 
-            IServiceCollection svc = new ServiceCollection(); //.AddSingleton(this);
+            IServiceCollection svc = new ServiceCollection();
 
             if (services.HasService(Service.Accounts))
                 svc = svc.AddSingleton(new Accounts(this));
@@ -47,7 +47,6 @@ namespace Wargaming_Net
         internal async Task<T> GetRequest<T>(RequestArguments requestArguments)
         {
             return await WargamingApi.WargamingApi.GetRequest<T>(
-                //new Uri(Smart.Format(_requestForm, requestArguments))
                 new Uri(
                     string.Format(
                         _requestForm,
