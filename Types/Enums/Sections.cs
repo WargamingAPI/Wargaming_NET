@@ -2,10 +2,10 @@
 {
     public enum Sections : byte
     {
-        account,
+        Account,
 
         //wargag,
-        wgtv,
-        servers
+        Wgtv,
+        Servers
     }
 }

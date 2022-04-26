@@ -1,8 +1,6 @@
 ﻿#nullable enable
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Wargaming_Net.Types;
 using Wargaming_Net.Types.Accounts;
 using Wargaming_Net.Types.Enums;
 using WargamingApi.Types;
