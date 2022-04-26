@@ -1,9 +1,12 @@
-﻿namespace Wargaming_Net.Types.Wgtv
+﻿using Newtonsoft.Json;
+
+namespace Wargaming_Net.Types.Wgtv
 {
     public struct WgtvCategory
     {
-        public string name { get; set; }
-        public ulong order { get; set; }
-        public ulong category_id { get; set; }
+        public string Name { get; set; }
+        public ulong Order { get; set; }
+
+        [JsonProperty("category_id")] public ulong CategoryId { get; set; }
     }
 }

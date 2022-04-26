@@ -6,21 +6,28 @@ namespace Wargaming_Net.Types.Wgtv
 {
     public struct Video
     {
-        public string title { get; set; }
-        public string ext_title { get; set; }
-        public string description { get; set; }
-        public string video_id { get; set; }
-        public string video_url { get; set; }
+        public string Title { get; set; }
 
-        public Thumbnails thumbnails { get; set; }
-        public bool important { get; set; }
-        public long published_at { get; set; }
-        public ulong duration { get; set; }
+        [JsonProperty("ext_title")] public string ExtTitle { get; set; }
+        public string Description { get; set; }
 
+        [JsonProperty("video_id")] public string VideoId { get; set; }
+
+        [JsonProperty("video_url")] public string VideoUrl { get; set; }
+
+        public Thumbnails Thumbnails { get; set; }
+        public bool Important { get; set; }
+
+        [JsonProperty("published_at")] public long PublishedAt { get; set; }
+        public ulong Duration { get; set; }
+
+
+        [JsonProperty("category_id")]
         [JsonConverter(typeof(ArrayConverter))]
-        public IEnumerable<ulong> category_id { get; set; }
+        public IEnumerable<ulong> CategoryId { get; set; }
 
+        [JsonProperty("project_id")]
         [JsonConverter(typeof(ArrayConverter))]
-        public IEnumerable<ulong> project_id { get; set; }
+        public IEnumerable<ulong> ProjectId { get; set; }
     }
 }

@@ -7,11 +7,13 @@ namespace Wargaming_Net.Types.Accounts
 {
     public class Account
     {
-        public ulong account_id { get; set; }
-        public long created_at { get; set; }
-        public string nickname { get; set; }
+        [JsonProperty("account_id")] public ulong AccountId { get; set; }
+
+        [JsonProperty("created_at")] public long CreatedAt { get; set; }
+
+        public string Nickname { get; set; } = "";
 
         [JsonConverter(typeof(ArrayConverter))]
-        public IEnumerable<string>? games { get; set; }
+        public IEnumerable<string>? Games { get; set; }
     }
 }

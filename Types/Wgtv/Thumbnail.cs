@@ -2,8 +2,8 @@
 {
     public struct Thumbnail
     {
-        public string url { get; set; }
-        public uint width { get; set; }
-        public uint height { get; set; }
+        public string Url { get; set; }
+        public uint Width { get; set; }
+        public uint Height { get; set; }
     }
 }

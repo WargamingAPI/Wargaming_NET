@@ -1,11 +1,13 @@
-﻿using WargamingApi.Types;
+﻿using Newtonsoft.Json;
+using WargamingApi.Types;
 
 namespace Wargaming_Net.Types.Wgtv
 {
     public class WgtvMeta : Meta
     {
-        public ulong page_total { get; set; }
-        public ulong limit { get; set; }
-        public ulong page { get; set; }
+        [JsonProperty("page_total")] public ulong PageTotal { get; set; }
+
+        public ulong Limit { get; set; }
+        public ulong Page { get; set; }
     }
 }

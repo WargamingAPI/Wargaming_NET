@@ -1,9 +1,13 @@
-﻿namespace Wargaming_Net.Types.Wgtv
+﻿using Newtonsoft.Json;
+
+namespace Wargaming_Net.Types.Wgtv
 {
     public struct Project
     {
-        public string name { get; set; }
-        public ulong order { get; set; }
-        public ulong project_id { get; set; }
+        public string Name { get; set; }
+
+        public ulong Order { get; set; }
+
+        [JsonProperty("project_id")] public ulong ProjectId { get; set; }
     }
 }

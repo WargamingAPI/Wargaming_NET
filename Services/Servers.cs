@@ -21,7 +21,7 @@ namespace Wargaming_Net.Services
 
         public async Task<Respond<ServersMeta, TypeServers?>> GetServersOnline(
             Regions region,
-            Language language = Language.en,
+            Language language = Language.En,
             IEnumerable<string>? fields = null,
             IEnumerable<string>? game = null
         )
@@ -30,13 +30,13 @@ namespace Wargaming_Net.Services
                 new RequestArguments
                 {
                     Region = region,
-                    Section = Sections.servers,
-                    Type = Format.info,
+                    Section = Sections.Servers,
+                    Type = Format.Info,
                     RequestParameters = new RequestParameters
                     {
-                        fields = fields,
-                        game = game,
-                        language = language
+                        Fields = fields,
+                        Game = game,
+                        Language = language
                     }
                 }
             );

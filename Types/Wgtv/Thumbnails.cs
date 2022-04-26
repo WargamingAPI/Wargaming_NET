@@ -2,10 +2,10 @@
 {
     public struct Thumbnails
     {
-        public Thumbnail @default { get; set; }
-        public Thumbnail high { get; set; }
-        public Thumbnail medium { get; set; }
-        public Thumbnail maxres { get; set; }
-        public Thumbnail standard { get; set; }
+        public Thumbnail Default { get; set; }
+        public Thumbnail High { get; set; }
+        public Thumbnail Medium { get; set; }
+        public Thumbnail Maxres { get; set; }
+        public Thumbnail Standard { get; set; }
     }
 }

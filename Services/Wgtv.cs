@@ -20,7 +20,7 @@ namespace Wargaming_Net.Services
 
         public async Task<Respond<WgtvMeta, TagsData>> GetTags(
             Regions region,
-            Language language = Language.en,
+            Language language = Language.En,
             IEnumerable<string>? fields = null
         )
         {
@@ -28,12 +28,12 @@ namespace Wargaming_Net.Services
                 new RequestArguments
                 {
                     Region = region,
-                    Section = Sections.wgtv,
-                    Type = Format.tags,
+                    Section = Sections.Wgtv,
+                    Type = Format.Tags,
                     RequestParameters = new RequestParameters
                     {
-                        fields = fields,
-                        language = language
+                        Fields = fields,
+                        Language = language
                     }
                 }
             );
@@ -41,29 +41,29 @@ namespace Wargaming_Net.Services
 
         public async Task<IEnumerable<Project>> GetProjects(
             Regions region,
-            Language language = Language.en,
+            Language language = Language.En,
             IEnumerable<string>? fields = null
         )
         {
-            return (await GetTags(region, language, fields)).data.Projects;
+            return (await GetTags(region, language, fields)).Data.Projects;
         }
 
         public async Task<IEnumerable<WgtvCategory>> GetCategories(
             Regions region,
-            Language language = Language.en,
+            Language language = Language.En,
             IEnumerable<string>? fields = null
         )
         {
-            return (await GetTags(region, language, fields)).data.Categories;
+            return (await GetTags(region, language, fields)).Data.Categories;
         }
 
         public async Task<IEnumerable<Program>> GetPrograms(
             Regions region,
-            Language language = Language.en,
+            Language language = Language.En,
             IEnumerable<string>? fields = null
         )
         {
-            return (await GetTags(region, language, fields)).data.Programs;
+            return (await GetTags(region, language, fields)).Data.Programs;
         }
 
         public async Task<Respond<WgtvMeta, Dictionary<string, IEnumerable<ulong>>>> GetVehicles(
@@ -78,13 +78,13 @@ namespace Wargaming_Net.Services
                 new RequestArguments
                 {
                     Region = region,
-                    Section = Sections.wgtv,
-                    Type = Format.vehicles,
+                    Section = Sections.Wgtv,
+                    Type = Format.Vehicles,
                     RequestParameters = new RequestParameters
                     {
-                        category_id = categoryId,
-                        program_id = programId,
-                        project_id = projectId
+                        CategoryId = categoryId,
+                        ProgramId = programId,
+                        ProjectId = projectId
                     }
                 }
             );
@@ -92,7 +92,7 @@ namespace Wargaming_Net.Services
 
         public async Task<Respond<WgtvMeta, IEnumerable<Video>>> GetVideos(
             Regions region,
-            Language language = Language.en,
+            Language language = Language.En,
             string? q = null,
             bool? important = null,
             byte? limit = null,
@@ -110,22 +110,22 @@ namespace Wargaming_Net.Services
                 new RequestArguments
                 {
                     Region = region,
-                    Section = Sections.wgtv,
-                    Type = Format.videos,
+                    Section = Sections.Wgtv,
+                    Type = Format.Videos,
                     RequestParameters = new RequestParameters
                     {
-                        fields = fields,
-                        language = language,
-                        limit = limit,
-                        category_id = categoryId,
-                        program_id = programId,
-                        project_id = projectId,
-                        date_from = dateFrom,
-                        important = important,
-                        page_no = pageIndex,
-                        q = q,
-                        vehicle_id = vehicleId,
-                        video_id = videoId
+                        Fields = fields,
+                        Language = language,
+                        Limit = limit,
+                        CategoryId = categoryId,
+                        ProgramId = programId,
+                        ProjectId = projectId,
+                        DateFrom = dateFrom,
+                        Important = important,
+                        PageNo = pageIndex,
+                        Q = q,
+                        VehicleId = vehicleId,
+                        VideoId = videoId
                     }
                 }
             );

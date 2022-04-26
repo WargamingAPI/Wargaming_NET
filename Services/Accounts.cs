@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Wargaming_Net.Types.Accounts;
 using Wargaming_Net.Types.Enums;
 using WargamingApi.Types;
-using static WargamingApi.Types.Types;
+using static WargamingApi.Types.Type;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;
 using RequestParameters = Wargaming_Net.Types.RequestParameters;
 
@@ -22,8 +22,8 @@ namespace Wargaming_Net.Services
         public async Task<Respond<Meta, IEnumerable<Account>>> SearchAccounts(
             Regions region,
             string search,
-            Language language = Language.en,
-            WargamingApi.Types.Types type = startswith,
+            Language language = Language.En,
+            Type type = Startswith,
             byte? limit = null,
             IEnumerable<string>? fields = null,
             IEnumerable<string>? game = null
@@ -33,16 +33,16 @@ namespace Wargaming_Net.Services
                 new RequestArguments
                 {
                     Region = region,
-                    Section = Sections.account,
-                    Type = Format.list,
+                    Section = Sections.Account,
+                    Type = Format.List,
                     RequestParameters = new RequestParameters
                     {
-                        search = search,
-                        fields = fields,
-                        game = game,
-                        language = language,
-                        limit = limit,
-                        type = type
+                        Search = search,
+                        Fields = fields,
+                        Game = game,
+                        Language = language,
+                        Limit = limit,
+                        Type = type
                     }
                 }
             );
@@ -51,7 +51,7 @@ namespace Wargaming_Net.Services
         public async Task<Respond<Meta, Dictionary<ulong, AccountInfo?>>> GetAccountInfo(
             Regions region,
             IEnumerable<long> accountId,
-            Language language = Language.en,
+            Language language = Language.En,
             string? accessToken = null,
             IEnumerable<string>? fields = null
         )
@@ -60,14 +60,14 @@ namespace Wargaming_Net.Services
                 new RequestArguments
                 {
                     Region = region,
-                    Section = Sections.account,
-                    Type = Format.info,
+                    Section = Sections.Account,
+                    Type = Format.Info,
                     RequestParameters = new RequestParameters
                     {
-                        account_id = accountId,
-                        access_token = accessToken,
-                        fields = fields,
-                        language = language
+                        AccountId = accountId,
+                        AccessToken = accessToken,
+                        Fields = fields,
+                        Language = language
                     }
                 }
             );
