@@ -6,7 +6,9 @@ using Wargaming_Net.Types.Servers;
 using WargamingApi.Types;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;
 using RequestParameters = Wargaming_Net.Types.RequestParameters;
-using TypeServers = System.Collections.Generic.Dictionary<string, System.Collections.Generic.IEnumerable<Wargaming_Net.Types.Servers.Server>>;
+using TypeServers =
+    System.Collections.Generic.Dictionary<string,
+        System.Collections.Generic.IEnumerable<Wargaming_Net.Types.Servers.Server>>;
 
 namespace Wargaming_Net.Services
 {
