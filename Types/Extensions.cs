@@ -32,7 +32,7 @@ namespace Wargaming_Net.Types
                 _ => throw new ArgumentOutOfRangeException(nameof(target), target, null)
             };
         }
-        
+
         [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
         public static string EnumToString(this Sections target)
         {
@@ -44,7 +44,7 @@ namespace Wargaming_Net.Types
                 _ => throw new ArgumentOutOfRangeException(nameof(target), target, null)
             };
         }
-        
+
         [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
         public static string EnumToString(this Service target)
         {
