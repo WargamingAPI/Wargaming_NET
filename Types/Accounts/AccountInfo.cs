@@ -1,18 +1,7 @@
-﻿#nullable enable
-using System.Collections.Generic;
-using System.ComponentModel;
-using Newtonsoft.Json;
-
-namespace Wargaming_Net.Types.Accounts
+﻿namespace Wargaming_Net.Types.Accounts
 {
-    public struct AccountInfo
+    public class AccountInfo : Account
     {
-        public ulong account_id { get; set; }
-        public long created_at { get; set; }
-        public string nickname { get; set; }
-
-        [JsonConverter(typeof(ArrayConverter))]
-        public IEnumerable<string>? games { get; set; }
         //TODO: add private fields
         /*
          private		                                Приватные данные игрока

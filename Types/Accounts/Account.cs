@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Wargaming_Net.Types.Accounts
 {
-    public struct Account
+    public class Account
     {
         public ulong account_id { get; set; }
         public long created_at { get; set; }
