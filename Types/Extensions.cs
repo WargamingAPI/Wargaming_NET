@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using Wargaming_Net.Types.Enums;
 
 namespace Wargaming_Net.Types
 {

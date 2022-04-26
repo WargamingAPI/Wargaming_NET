@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Wargaming_Net.Types;
 using Wargaming_Net.Types.Accounts;
+using Wargaming_Net.Types.Enums;
 using WargamingApi.Types;
 using static WargamingApi.Types.Types;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;

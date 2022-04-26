@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Wargaming_Net.Types;
+using Wargaming_Net.Types.Enums;
 using Wargaming_Net.Types.Wgtv;
 using WargamingApi.Types;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;

@@ -1,4 +1,4 @@
-﻿namespace Wargaming_Net.Types
+﻿namespace Wargaming_Net.Types.Enums
 {
     public enum Sections : byte
     {

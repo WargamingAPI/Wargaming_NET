@@ -1,7 +1,7 @@
 ﻿#nullable enable
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Wargaming_Net.Types;
+using Wargaming_Net.Types.Enums;
 using Wargaming_Net.Types.Servers;
 using WargamingApi.Types;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;

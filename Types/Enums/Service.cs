@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Wargaming_Net.Types
+namespace Wargaming_Net.Types.Enums
 {
     [Flags]
     public enum Service : byte

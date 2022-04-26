@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Wargaming_Net.Types.Enums;
 using static WargamingApi.WargamingApi;
 
 namespace Wargaming_Net.Types

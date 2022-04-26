@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Wargaming_Net.Services;
 using Wargaming_Net.Types;
+using Wargaming_Net.Types.Enums;
 
 namespace Wargaming_Net
 {
