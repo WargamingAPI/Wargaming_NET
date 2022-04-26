@@ -13,8 +13,8 @@
         Comments,
         Categories,
         Rate,
-        Newcomment,
-        Deletecomment,
+        NewComment,
+        DeleteComment,
 
         // Wgtv
         Videos,

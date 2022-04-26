@@ -23,7 +23,7 @@ namespace Wargaming_Net.Services
             Regions region,
             string search,
             Language language = Language.En,
-            Type type = Startswith,
+            Type type = StartsWith,
             byte? limit = null,
             IEnumerable<string>? fields = null,
             IEnumerable<string>? game = null
