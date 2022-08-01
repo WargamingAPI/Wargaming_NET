@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 using Wargaming_Net.Types.Accounts;
 using Wargaming_Net.Types.Enums;
 using WargamingApi.Types;
-using static WargamingApi.Types.Type;
+using WargamingApi.Types.Enums;
+using static WargamingApi.Types.Enums.Type;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;
 using RequestParameters = Wargaming_Net.Types.RequestParameters;
 
@@ -12,11 +13,11 @@ namespace Wargaming_Net.Services
 {
     public sealed class Accounts
     {
-        private readonly WargamingNet _client;
+        private readonly WargamingNetClient m_client;
 
-        internal Accounts(WargamingNet client)
+        public Accounts(WargamingNetClient client)
         {
-            _client = client;
+            m_client = client;
         }
 
         public async Task<Respond<Meta, IEnumerable<Account>>> SearchAccounts(
@@ -29,7 +30,7 @@ namespace Wargaming_Net.Services
             IEnumerable<string>? game = null
         )
         {
-            return await _client.GetRequest<Respond<Meta, IEnumerable<Account>>>(
+            return await m_client.GetRequest<Respond<Meta, IEnumerable<Account>>>(
                 new RequestArguments
                 {
                     Region = region,
@@ -56,7 +57,7 @@ namespace Wargaming_Net.Services
             IEnumerable<string>? fields = null
         )
         {
-            return await _client.GetRequest<Respond<Meta, Dictionary<ulong, AccountInfo?>>>(
+            return await m_client.GetRequest<Respond<Meta, Dictionary<ulong, AccountInfo?>>>(
                 new RequestArguments
                 {
                     Region = region,

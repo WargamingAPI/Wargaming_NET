@@ -11,7 +11,7 @@ namespace Wargaming_Net.Types
 
         internal new object RequestParameters
         {
-            set => base.RequestParameters = JsonConvert.SerializeObject(value, SerializationOptions);
+            set => base.RequestParameters = JsonConvert.SerializeObject(value, WargamingApiClient.SerializationOptions);
         }
     }
 }

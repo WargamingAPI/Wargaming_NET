@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Wargaming_Net.Types.Enums;
 using Wargaming_Net.Types.Wgtv;
+using Wargaming_Net.Types.Wgtv.Structs;
 using WargamingApi.Types;
+using WargamingApi.Types.Enums;
 using RequestArguments = Wargaming_Net.Types.RequestArguments;
 using RequestParameters = Wargaming_Net.Types.RequestParameters;
 
@@ -11,11 +13,11 @@ namespace Wargaming_Net.Services
 {
     public sealed class Wgtv
     {
-        private readonly WargamingNet _client;
+        private readonly WargamingNetClient m_client;
 
-        internal Wgtv(WargamingNet client)
+        public Wgtv(WargamingNetClient client)
         {
-            _client = client;
+            m_client = client;
         }
 
         public async Task<Respond<WgtvMeta, TagsData>> GetTags(
@@ -24,7 +26,7 @@ namespace Wargaming_Net.Services
             IEnumerable<string>? fields = null
         )
         {
-            return await _client.GetRequest<Respond<WgtvMeta, TagsData>>(
+            return await m_client.GetRequest<Respond<WgtvMeta, TagsData>>(
                 new RequestArguments
                 {
                     Region = region,
@@ -73,7 +75,7 @@ namespace Wargaming_Net.Services
             IEnumerable<string>? projectId = null
         )
         {
-            return await _client.GetRequest<
+            return await m_client.GetRequest<
                 Respond<WgtvMeta, Dictionary<string, IEnumerable<ulong>>>>(
                 new RequestArguments
                 {
@@ -106,7 +108,7 @@ namespace Wargaming_Net.Services
             IEnumerable<string>? categoryId = null
         )
         {
-            return await _client.GetRequest<Respond<WgtvMeta, IEnumerable<Video>>>(
+            return await m_client.GetRequest<Respond<WgtvMeta, IEnumerable<Video>>>(
                 new RequestArguments
                 {
                     Region = region,
