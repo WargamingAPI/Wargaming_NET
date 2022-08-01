@@ -13,7 +13,6 @@ namespace Wargaming_Net.Types.Accounts
 
         public string Nickname { get; set; } = "";
 
-        [JsonConverter(typeof(ArrayConverter))]
         public IEnumerable<string>? Games { get; set; }
     }
 }
