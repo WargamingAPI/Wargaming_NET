@@ -1,4 +1,4 @@
-﻿namespace Wargaming_Net.Types.Wgtv
+﻿namespace Wargaming_Net.Types.Wgtv.Structs
 {
     public struct Thumbnail
     {

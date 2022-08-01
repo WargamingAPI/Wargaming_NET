@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
 using Newtonsoft.Json;
 
-namespace Wargaming_Net.Types.Wgtv
+namespace Wargaming_Net.Types.Wgtv.Structs
 {
     public struct Video
     {
@@ -23,11 +22,9 @@ namespace Wargaming_Net.Types.Wgtv
 
 
         [JsonProperty("category_id")]
-        [JsonConverter(typeof(ArrayConverter))]
         public IEnumerable<ulong> CategoryId { get; set; }
 
         [JsonProperty("project_id")]
-        [JsonConverter(typeof(ArrayConverter))]
         public IEnumerable<ulong> ProjectId { get; set; }
     }
 }

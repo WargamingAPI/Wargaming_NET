@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Wargaming_Net.Types.Wgtv
+namespace Wargaming_Net.Types.Wgtv.Structs
 {
     public struct Project
     {
